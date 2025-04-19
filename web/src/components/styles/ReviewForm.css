@@ -1,0 +1,101 @@
+
+
+.form-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    color: #4b5563;
+    margin-bottom: 20px;
+  }
+  
+  .face-icon {
+    font-size: 60px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: #FBB202;
+  }
+  
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .star-wrapper {
+    position: relative;
+  }
+  
+  .radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+  
+  .star-icon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .input-field,
+  .textarea-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: #cccccc2b;
+    border: none;
+    transition: border 0.3s ease;
+  }
+  
+  .textarea-field {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  } 
+  
+  .submit-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  } 
+  
+  .submit-button:enabled {
+    background-color: #4ade80;
+    cursor: pointer;
+  }
+  .star-icon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  

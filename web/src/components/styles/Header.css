@@ -1,0 +1,58 @@
+.header {
+    background-color: #f9f9f9;
+    padding: 0px 20px;
+    color: #4b5563;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* ensures it stays on top */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+  }
+  
+  .header-text {
+    max-width: 600px;
+  }
+  
+  .headline {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    
+  }
+  
+  .subheadline {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 567px) {
+    .headline {
+      font-size: 0.9rem;
+    }
+    .subheadline{
+        font-size: 0.9rem;
+    }
+  }

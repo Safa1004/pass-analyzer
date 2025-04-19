@@ -1,14 +1,18 @@
 /* Container */
 .input-container {
 	max-width: 28rem;
-	margin: 0 auto;
+	margin: 0px auto;
 	background-color: white;
 	padding: 1.5rem;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 	border-radius: 1rem;
 	transition: all 0.3s ease-in-out;
+	
 }
-
+.input-section {
+	background: #f9f9f9;
+    padding-top: 7rem;
+}
 .input-container:hover {
 	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 	transform: translateY(-5px);
@@ -271,4 +275,7 @@
 .crack-time ul li span:last-child {
 	font-weight: 600;
 	color: #3b82f6; /* blue-500 for larger units like Years */
+}
+.user-name{
+margin-bottom:.5rem ;
 }
