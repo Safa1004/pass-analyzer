@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getPasswordStrength } from './utils/passwordStrength';
 import { checkPwnedPassword } from './utils/passwordCheck';
 import { fetchCrackingTime } from './utils/api';
-import { FiLock } from 'react-icons/fi';
+import { FiLock, FiUser } from 'react-icons/fi';
 import {
 	AiOutlineArrowDown,
 	AiOutlineArrowUp,
@@ -20,10 +20,11 @@ import './styles/Input.css'; // Import the external CSS file
 const Input = ({ placeholder = 'Enter password' }) => {
 	const [password, setPassword] = useState('');
 	const [showPassword, setShowPassword] = useState(false);
+	const [username, setUsername] = useState('');
 	const [pwned, setPwned] = useState(null);
 	const [crackTime, setCrackTime] = useState(null);
 
-	const { level, color, criteria } = getPasswordStrength(password);
+	const { level, color, criteria } = getPasswordStrength(password,username);
 	// Run the API check when the password changes
 	useEffect(() => {
 		const checkPassword = async () => {
@@ -94,8 +95,24 @@ const Input = ({ placeholder = 'Enter password' }) => {
 	};
 
 	return (
-		<section>
+		<section id='Analyze' className='input-section'>
 			<div className={`input-container ${color}`}>
+
+{/* user name Input Field with Icons */}
+<div className="input-wrapper user-name">
+					<FiUser  className="icon" />
+					<input
+						type='text' 
+						value={username}
+						onChange={(e) => setUsername(e.target.value)}
+						placeholder='user name '
+						className={`input-field ${color}`}
+					/>
+					
+	
+			</div>
+
+
 				{/* Input Field with Icons */}
 				<div className="input-wrapper">
 					<FiLock className="icon" />
@@ -124,6 +141,8 @@ const Input = ({ placeholder = 'Enter password' }) => {
 					<p className="strength-text ">{level}</p>
 				</div>
 			</div>
+			
+				
 			<ol className="list-container">
 				<li className={criteria.containsLower ? 'green' : ''}>
 					<AiOutlineArrowDown className="icon" />
